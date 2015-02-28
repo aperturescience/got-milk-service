@@ -9,7 +9,7 @@ setInterval(function() {
   console.log(data);
 
   request({
-    uri    : 'http://gilles.local:3001/consumer',
+    uri    : 'http://michiel.local:3001/consumer',
     method : 'POST',
     body   : data,
     json   : true,
