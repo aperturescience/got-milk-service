@@ -1,12 +1,10 @@
+'use strict';
+
 var hue = require('./lib/hue');
 hue.connect();
 
-module.exports = function(req, res, next) {
-
+module.exports = function(req, res) {
   var data = req.body;
-  emitter.emit('message', data);
-
-  console.log(data);
 
   var weight = data.weight;
 
@@ -17,6 +15,8 @@ module.exports = function(req, res, next) {
   } else if (weight > 666 && weight <= 1000) {
     hue.setGreen();
   }
+
+  global.emitter.emit('message', data);
 
   res.end();
 };

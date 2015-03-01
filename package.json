@@ -8,7 +8,8 @@
     "express": "^4.12.0",
     "morgan": "^1.5.1",
     "node-hue-api": "^1.0.5",
-    "relayr": "^0.3.4",
+    "mqtt": "^1.1.0",
+    "relayr": "git://github.com/gillesdemey/node-relayr.git#master",
     "request": "^2.53.0"
   },
   "devDependencies": {},
